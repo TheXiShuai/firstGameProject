@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>the defender</title>
 </head>
 <body>
+    <h1>this is the title of the game</h1>
+    <div class="playerStats">
+        <h2>Status</h2>
+        <p>Score: <span id="score">0</span></p>
+        <p>Lives: <span id="lives">5</span></p>
+    </div>
+
+    <div id="gameContainer">
+        <div id="player"></div>
+        <div id="enemy"></div>
+    </div>
+
+    <div class="button-container">
+        <button id="resetButton">RESET</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

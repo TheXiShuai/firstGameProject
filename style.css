@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    margin-top: 20px;
+}
+
+.playerStats {
+    text-align: left;
+    margin-left: 20px;
+}
+
+#gameContainer {
+    width: 500px;
+    height: 700px;
+    border-color: red;
+    text-align: center;
+    background-color: yellowgreen;
+    display: grid;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: brown;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#resetButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
