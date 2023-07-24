@@ -1,9 +1,23 @@
-function handleKeyboardInput(key){
- 
-    if(key === "ArrowLeft"){
-      game.player.directionX = -1;
+const newGame = new Game();
+const newPlayer = new Player();
+
+function handleKeyboardInput(key) {
+  if (key === "ArrowLeft") {
+    newPlayer.x -= 10
+    if(newPlayer.x < 0){
+       newPlayer.x = 0;
     }
-    else if(key === "ArrowRight"){
-      game.player.directionX = 1;
+    // Add logic to change style.left of the player
+  } else if (key === "ArrowRight"){
+    newPlayer.x += 10;
+    if(newPlayer.x > 600 - newPlayer.width){
+        newPlayer.x = 600 - newPlayer.width;
     }
   }
+  newPlayer.playerElement.style.left = `${newPlayer.x}px`;
+}
+
+
+document.addEventListener("keydown",(event) => {
+    handleKeyboardInput(event.key)
+  })

@@ -5,37 +5,45 @@ body{
 }
 
 h1{
-    text-align: center;
+    text-align: left;
+    display: flexbox;
     color: blue;
 }
 
-.playerStats{
-    text-align: left;
+.playerStats {
+    text-align: right;
+    display: grid;
+
 }
 
+
 #gameContainer {
-    width: 500px;
+    width: 600px;
     height: 700px;
-    border-color: red;
-    text-align: center;
-    background-position: center; 
-    display: grid;
-    align-items: center;
-    position: relative; 
-    background-color: yellowgreen;
+    background-color: burlywood;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
 }
+
 
 
 #player {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
     background-color: brown;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-image: url(img/harry_maguire_manchester_united_premier_league_eng_by_uniqrenders_dfofn3g-fullview.jpeg);
+    bottom: 0;
+    left: 0;
 }
 
 
-
+.button-container{
+    text-align: right;
+    flex-direction: row;
+}
