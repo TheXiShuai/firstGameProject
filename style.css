@@ -12,9 +12,14 @@ h1{
 
 .playerStats {
     text-align: right;
-    display: grid;
-
+    display: flexbox;
+    padding: 80px;
+    border: 4px solid black;
+    margin-left: 1100px; 
+    margin-right: 500px;
+    
 }
+
 
 
 #gameContainer {
@@ -32,9 +37,8 @@ h1{
 
 
 #player {
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
+    width: 150px;
+    height: 150px;
     background-color: brown;
     position: absolute;
     background-image: url(img/harry_maguire_manchester_united_premier_league_eng_by_uniqrenders_dfofn3g-fullview.jpeg);
@@ -43,7 +47,33 @@ h1{
 }
 
 
+
+.ball{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    /* background-image: url(img/download.jpeg); */
+    background-size:cover;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+
+
 .button-container{
     text-align: right;
     flex-direction: row;
+    padding: 160px;
+
+}
+
+#resetButton{
+
+    background-color: black;
+    color: white;
+    font-weight: 30px;
+    padding: 30px;
+    
 }
