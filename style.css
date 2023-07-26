@@ -1,29 +1,45 @@
-body{
-    width: auto;
-    height: auto;
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    background-size: cover;
     background-image: url(img/pitch.background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-h1{
-    text-align: left;
-    display: flexbox;
-    color: red;
-}
 
+
+h1 {
+    text-align: center;
+    justify-content:flex-end;
+    position: absolute;
+    display: flex;
+    color: white;
+    background-color: red;
+    margin: 50px 1050px 0px 0px;
+    word-wrap: break-word;
+    padding-bottom: 90px;
+    width: 400px;
+    font-size: 100px;
+}
 .playerStats {
     text-align: right;
+    justify-content: flex-end;
     display: flexbox;
+    width:150px;
     padding: 90px;
-    border: 6px solid #fff;
+    border: 3px solid #fff;
     color: yellow;
     background-color: black;
-    margin-left: 1100px; 
-    margin-right: 500px;
+    margin-left: 1050px;
+    margin-top: 50px;
 
     
 }
+
 
 
 
@@ -70,7 +86,8 @@ h1{
 .button-container{
     text-align: right;
     flex-direction: row;
-    padding: 160px;
+    padding: 50px;
+    margin-right: 100px;
 
 }
 

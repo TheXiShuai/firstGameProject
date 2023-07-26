@@ -2,6 +2,12 @@ const newGame = new Game();
 const newPlayer = new Player();
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Play the background music when the page loads
+  const backgroundMusic = document.getElementById("backgroundMusic");
+  backgroundMusic.play();
+});
+
 function handleKeyboardInput(key) {
   if (key === "ArrowLeft") {
     newPlayer.x -= 10
@@ -19,6 +25,7 @@ function handleKeyboardInput(key) {
 }
 
 document.addEventListener("keydown",(event) => {
+  event.preventDefault();
     handleKeyboardInput(event.key)
   })
  
@@ -45,6 +52,7 @@ setInterval(() => {
 setInterval(() => {
   makeBallsDrop()
   collissionDetectionForCircles()
+  updatePoints()
 
 },300);
 
@@ -79,36 +87,52 @@ function collissionDetectionForCircles() {
 
       // If the distance is less than the minimum distance, a collision is detected
       if (distance < minDistance) {
-          
-          // UPDATE POINTS updatepoints()
-          // UPDATE LIFES
-
+          updateLives()
           // Remove the obstacle from the DOM
           obstacle.remove();
       }
+    
+
   }
 }
 
 function updatePoints(){
-    if(newPlayer.playerElement.distance === newGame.obstacles.distance){
-      return newGame.lives + 1;
+    newGame.obstacles.forEach((obstacle)=>{
+      if(obstacle.offsetTop > 700){
+        newGame.score += 1;
+        obstacle.remove();
+        document.getElementById("score").innerHTML = newGame.score;  
+      }
+      
     }
+    )
 
 }
 
 
 function updateLives(){
-
-}
-
-
-function resetGame(){
-
-  const resetButton = newGame.buttonContainerElement;
+  
+      newGame.lives -= 1;
+      document.getElementById("lives").innerHTML = newGame.lives;
+      if(newGame.lives < 0){
+        window.alert("GAME OVER");
+        location.reload();
+      }
+ 
 
   
 
 }
+
+const resetButton = document.getElementById("resetButton");
+
+resetButton.addEventListener("click", function(event) {
+  
+  if (resetButton) {
+      location.reload();
+  }
+});
+
 
 
 
