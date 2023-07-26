@@ -40,12 +40,13 @@ function fallingObstacles(){
 setInterval(() => {
     fallingObstacles()
     
-}, 3000);
+}, 4000);
 
 setInterval(() => {
   makeBallsDrop()
+  collissionDetectionForCircles()
 
-},150);
+},300);
 
 function makeBallsDrop(){
   newGame.obstacles.forEach((obstacle)=>{
@@ -57,6 +58,57 @@ function makeBallsDrop(){
 
 
 
+
+
+function collissionDetectionForCircles() {
+
+  const playerX = newPlayer.playerElement.offsetLeft + newPlayer.playerElement.offsetWidth / 2;
+  const playerY = newPlayer.playerElement.offsetTop + newPlayer.playerElement.offsetHeight / 2;
+
+  // Loop through all rewards and check for collisions
+  for (const obstacle of newGame.obstacles) {
+      // Calculate the center coordinates of the reward circle
+      const obstacleX = obstacle.offsetLeft + obstacle.offsetWidth / 2;
+      const obstacleY = obstacle.offsetTop + obstacle.offsetHeight / 2;
+
+      // Calculate the distance between the two circles' centers
+      const distance = Math.sqrt((playerX - obstacleX) ** 2 + (playerY - obstacleY) ** 2);
+
+      // Calculate the minimum distance needed for a collision (sum of the radii)
+      const minDistance = newPlayer.playerElement.offsetWidth / 2 + obstacle.offsetWidth / 2;
+
+      // If the distance is less than the minimum distance, a collision is detected
+      if (distance < minDistance) {
+          
+          // UPDATE POINTS updatepoints()
+          // UPDATE LIFES
+
+          // Remove the obstacle from the DOM
+          obstacle.remove();
+      }
+  }
+}
+
+function updatePoints(){
+    if(newPlayer.playerElement.distance === newGame.obstacles.distance){
+      return newGame.lives + 1;
+    }
+
+}
+
+
+function updateLives(){
+
+}
+
+
+function resetGame(){
+
+  const resetButton = newGame.buttonContainerElement;
+
+  
+
+}
 
 
 

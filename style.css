@@ -2,21 +2,26 @@ body{
     width: auto;
     height: auto;
     text-align: center;
+    background-size: cover;
+    background-image: url(img/pitch.background.jpeg);
 }
 
 h1{
     text-align: left;
     display: flexbox;
-    color: blue;
+    color: red;
 }
 
 .playerStats {
     text-align: right;
     display: flexbox;
-    padding: 80px;
-    border: 4px solid black;
+    padding: 90px;
+    border: 6px solid #fff;
+    color: yellow;
+    background-color: black;
     margin-left: 1100px; 
     margin-right: 500px;
+
     
 }
 
@@ -25,7 +30,8 @@ h1{
 #gameContainer {
     width: 600px;
     height: 700px;
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    background-image:url(img/pitch\ gamecontainer.jpeg);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -39,21 +45,20 @@ h1{
 #player {
     width: 150px;
     height: 150px;
-    background-color: brown;
     position: absolute;
-    background-image: url(img/harry_maguire_manchester_united_premier_league_eng_by_uniqrenders_dfofn3g-fullview.jpeg);
-    bottom: 0;
+    background-image:url(./img/harry_maguire_manchester_united_premier_league_eng_by_uniqrenders_dfofn3g-fullview-removebg-preview.png) ;   bottom: 0;
     left: 0;
+    background-size: cover;
 }
 
 
 
 .ball{
-    width: 80px;
-    height: 80px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color: black;
-    /* background-image: url(img/download.jpeg); */
+    /* background-color: black; */
+    background-image: url(img/download.jpeg);
     background-size:cover;
     position: absolute;
     top:0;
