@@ -1,4 +1,4 @@
-
+// Player class to manage player's movements. Hence separate file for keeping the class out.
 
 class Player {
   constructor( left, width){
@@ -8,6 +8,4 @@ class Player {
     this.width = this.playerElement.offsetWidth;
 
   }
-
-
 }

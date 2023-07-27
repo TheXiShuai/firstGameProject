@@ -3,6 +3,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: fantasy;
     text-align: center;
     background-image: url(img/pitch.background.jpeg);
     background-repeat: no-repeat;
@@ -10,20 +11,19 @@ body {
     background-size: cover;
 }
 
-
-
 h1 {
     text-align: center;
     justify-content:flex-end;
     position: absolute;
     display: flex;
-    color: white;
-    background-color: red;
-    margin: 50px 1050px 0px 0px;
-    word-wrap: break-word;
-    padding-bottom: 90px;
-    width: 400px;
-    font-size: 100px;
+    color: #F0AC0D;
+    background:none;
+    width: 350px;
+    font-size: 80px;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 10px;
+
 }
 .playerStats {
     text-align: center;
@@ -31,9 +31,10 @@ h1 {
     display: flexbox;
     width:150px;
     padding: 90px;
-    color: yellow;
+    color: #F0AC0D;
+    font-weight: 800px;
     border: 3px solid #fff;
-    background-color: black;
+    background: radial-gradient(grey, black) ;
     margin-left: 1050px;
     margin-top: 50px;
 
@@ -52,13 +53,13 @@ h1 {
 #gameContainer {
     width: 600px;
     height: 700px;
-    /* background-color: burlywood; */
     background-image:url(img/pitch\ gamecontainer.jpeg);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    border: 3px solid #fff;
 
 }
 
@@ -76,11 +77,10 @@ h1 {
 
 
 .ball{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    /* background-color: black; */
-    background-image: url(img/download.jpeg);
+    background-image: url(img/png-transparent-football-cricket-balls-ball-white-sports-equipment-sports-thumbnail-removebg-preview.png);
     background-size:cover;
     position: absolute;
     top:0;
@@ -104,4 +104,26 @@ h1 {
     font-weight: 30px;
     padding: 30px;
     
+}
+
+/* Add this to your CSS file or inside <style> tags in the head of your HTML */
+#gameOverModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#modalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
 }
