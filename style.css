@@ -26,18 +26,24 @@ h1 {
     font-size: 100px;
 }
 .playerStats {
-    text-align: right;
+    text-align: center;
     justify-content: flex-end;
     display: flexbox;
     width:150px;
     padding: 90px;
-    border: 3px solid #fff;
     color: yellow;
+    border: 3px solid #fff;
     background-color: black;
     margin-left: 1050px;
     margin-top: 50px;
 
     
+}
+
+.playerStats span{
+    color: red;
+    font-weight: bold;
+    font-size: 80px;
 }
 
 
